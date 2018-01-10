@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+{% block body %}
+{% if results %}
+{% for url, percent, sample in results %}
+<div class="result-box">
+        Relevance:{{percent}}%  {{url }}
+        <p>{{ sample}}</p>
+</div>
+{% endfor %}
+{% else %}
+    <p>No results found.</p>
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+{% block body %}
+<div id="info">
+    <h2>§ Text search for German law</h2>
+    <p>
+            This is a search used to find relavent German laws (Gesetze) to an input query.
+    </p>
+<h3>Features</h3>
+        <ul>
+            <li>
+                Search in <b>German</b> or <b>English</b>.
+            </li>
+            <li>
+                Results take you to <b>specific paragraphs</b> of the law.
+            </li>
+            <li>
+                Full <b>logic operation</b> support (e.g. "stock NOT market", etc).
+            </li>
+            <li>
+                Supports <b>stemming </b>of search terms (e.g. a search for "football" would match documents which mention "footballs" or "footballer").
+            </li>
+            <li>
+                <b>Wildcard search</b> is supported (e.g. "destr*" will match destroy, destruct, so on). 
+            </li>
+        </ul>
+</div>
+{% endblock %}
