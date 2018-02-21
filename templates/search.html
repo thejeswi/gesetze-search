@@ -1,12 +1,14 @@
 {% extends "template.html" %}
 {% block body %}
-{% if response %}
+{% if  response['results']  %}
 <h3>{{ response['query'] }}</h3>
 {% for sample, url, score  in response['results'] %}
 <div class="result-box">
-        <b style="text-align:center">{{ url[0] }} {% if url[1] %}§{{ url[1] }}{% endif %}</b>
-        <p>{{ sample }}</p>
-        Score:{{ score }} 
+            {{ url[0] }} {% if url[1] %}§{{ url[1] }}{% endif %} <br>
+            Score:{{ score }} <br>
+            <p>{{ sample }}</p>
+        </li>
+        </ul>
 </div>
 {% endfor %}
 {% else %}
