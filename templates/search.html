@@ -1,10 +1,12 @@
 {% extends "template.html" %}
 {% block body %}
-{% if results %}
-{% for url, percent, sample in results %}
+{% if response %}
+<h3>{{ response['query'] }}</h3>
+{% for sample, url, score  in response['results'] %}
 <div class="result-box">
-        Relevance:{{percent}}%  {{url }}
+        <b style="text-align:center">{{ url[0] }} {% if url[1] %}§{{ url[1] }}{% endif %}</b>
         <p>{{ sample}}</p>
+        Score:{{score}} 
 </div>
 {% endfor %}
 {% else %}
