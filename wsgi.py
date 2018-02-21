@@ -17,4 +17,4 @@ def query():
     return render_template("search.html", response = response, query=query, language = langauge)
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
