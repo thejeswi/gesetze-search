@@ -3,14 +3,14 @@ from flask import Flask, render_template, request
 def search(q):
     return None
     
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route("/")
-@app.route("/search")
+@application.route("/")
+@application.route("/search")
 def index():
     return render_template("index.html")
 
-@app.route("/query", methods=['POST'])
+@application.route("/query", methods=['POST'])
 def query():
     query = request.form['query']
     # ~ langauge = request.form['langauge']
@@ -20,4 +20,4 @@ def query():
     return render_template("search.html", response = response, query=query, language = langauge)
     
 if __name__ == '__main__':
-    app.run()
+    application.run()
