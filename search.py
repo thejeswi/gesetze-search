@@ -32,9 +32,8 @@ def search(query_input):
                 content, law_title, para_n = r.values()
                 if para_n == "":
                     para_n = None
-                url = (law_title, para_n)
                 score = "{0:.2f}".format(r.score)
-                results_list.append((content, url, score))
+                results_list.append([content, law_title, para_n, score])
         response['results'] = results_list
     return response
 if __name__ == '__main__':

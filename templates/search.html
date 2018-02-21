@@ -2,11 +2,11 @@
 {% block body %}
 {% if  response['results']  %}
 <h3>{{ response['query'] }}</h3>
-{% for sample, url, score  in response['results'] %}
+{% for sample, law_title, para_n, score  in response['results'] %}
 <div class="result-box">
-            {{ url[0] }} {% if url[1] %}§{{ url[1] }}{% endif %} <br>
-            Score:{{ score }} <br>
+            <b>{{ law_title }}{% if para_n %}§{{ para_n }}{% endif %}</b>
             <p>{{ sample }}</p>
+            {{ score }}
         </li>
         </ul>
 </div>

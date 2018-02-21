@@ -9,6 +9,7 @@ body {
  grid-template-rows: 80px 1fr 20px;
  grid-template-columns: 100px 1fr;
  font-family:'Georgia', serif;
+    background-color: #C48DFF;
 }
 
 #header img{
@@ -57,6 +58,7 @@ nav ul li{
     height: 250px;
     overflow: hidden;
     float: left;
-    border:dashed 1px;
-    padding: 2px;
+    /*! border:dashed 1px; */
+    padding: 5px;
+    background-color: #6D00E5;
 }
