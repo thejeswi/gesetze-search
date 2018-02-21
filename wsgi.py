@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request
-from search import search
+# ~ from search import search
+def search(q):
+    return None
+    
 app = Flask(__name__)
 
 @app.route("/")
