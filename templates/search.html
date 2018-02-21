@@ -5,8 +5,8 @@
 {% for sample, url, score  in response['results'] %}
 <div class="result-box">
         <b style="text-align:center">{{ url[0] }} {% if url[1] %}§{{ url[1] }}{% endif %}</b>
-        <p>{{ sample}}</p>
-        Score:{{score}} 
+        <p>{{ sample }}</p>
+        Score:{{ score }} 
 </div>
 {% endfor %}
 {% else %}
