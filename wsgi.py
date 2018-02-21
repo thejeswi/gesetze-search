@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
-# ~ from search import search
-def search(q):
-    return None
+from search import search
+
     
 application = Flask(__name__)
 
@@ -20,4 +19,4 @@ def query():
     return render_template("search.html", response = response, query=query, language = langauge)
     
 if __name__ == '__main__':
-    application.run()
+    application.run()   
